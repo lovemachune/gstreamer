@@ -23,6 +23,7 @@ Intro: Use the docker to build the container has gstreamer in ubuntu 16.04
 	sudo docker exec -it <container id> bash
 	# compile the .c file
 	gcc basic-tutorial-1.c -o basic-tutorial-1 `pkg-config --cflags --libs gstreamer-1.0`
+	# execute it
 	./basic-tutorial-1
 # Reference
 Install gstreamer :
