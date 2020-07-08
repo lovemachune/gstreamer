@@ -27,6 +27,6 @@ Intro: Use the docker to build the gstreamer in ubuntu 16.04
 	./basic-tutorial-1
 # Reference
 Install gstreamer :
-https://github.com/jackersson/env-setup/tree/master/gst-ubuntu-16-py
+https://github.com/jackersson/env-setup/tree/master/gst-ubuntu-16-py  
 Gstreamer example :
 https://gstreamer.freedesktop.org/documentation/tutorials/basic/hello-world.html?gi-language=c
