@@ -14,15 +14,15 @@ Intro: Use the docker to build the gstreamer in ubuntu 16.04
 	#(if you had exit and close the container)
 	
 	# check the container id
-	sudo docker ps -a
+	sudo docker ps -a  
 	# start the container
-	sudo docker start <container id>
+	sudo docker start <container id>  
 	# copy the test file from host to container
-	sudo docker cp <path of the test file> <container id>:<path you want to copy to>
+	sudo docker cp <path of the test file> <container id>:<path you want to copy to>  
 	# go into the container
-	sudo docker exec -it <container id> bash
+	sudo docker exec -it <container id> bash  
 	# compile the .c file
-	gcc basic-tutorial-1.c -o basic-tutorial-1 `pkg-config --cflags --libs gstreamer-1.0`
+	gcc basic-tutorial-1.c -o basic-tutorial-1 `pkg-config --cflags --libs gstreamer-1.0`  
 	# execute it
 	./basic-tutorial-1
 # Reference
