@@ -10,8 +10,7 @@ Intro: Use the docker to build the gstreamer in ubuntu 16.04
 	xhost +local:
 	sudo docker run --name gstreamer-python-16 -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix/:/tmp/.X11-unix gstreamer-python:ubuntu-16
 ## Test gstreamer
-	# if you had exit and close the container
-	# restart the container and go into it 
+	# if you had exit and close the container, restart the container and go into it 
 	
 	# check the container id
 	sudo docker ps -a  
