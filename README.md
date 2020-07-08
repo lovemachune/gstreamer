@@ -1,5 +1,5 @@
 # gstreamer
-Intro: Use the docker to build the container has gstreamer in ubuntu 16.04
+Intro: Use the docker to build the gstreamer in ubuntu 16.04
 ## Install docker
 	# run the .sh in env to install the docker
 	sudo ./install_docker.sh	
