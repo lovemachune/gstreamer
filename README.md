@@ -5,7 +5,9 @@ Intro: Use the docker to build the gstreamer in ubuntu 16.04
 	sudo ./install_docker.sh	
 ## Install gstreamer
 	# build the dockerfile in env
-	docker build -t gstreamer-python:ubuntu-16 
+	docker build -t gstreamer-python:ubuntu-16
+	# or load from tar (I had save the gstreamer into the tar)
+	docker load -i gstreamer.tar
 	# run the images(for the first time)
 	xhost +local:
 	sudo docker run --name gstreamer-python-16 -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix/:/tmp/.X11-unix gstreamer-python:ubuntu-16
