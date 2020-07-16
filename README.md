@@ -8,18 +8,18 @@ Intro: Use the docker to build the gstreamer in ubuntu 16.04
 	docker build -t gstreamer-python:ubuntu-16
 	# run the images(for the first time)
 	xhost +local:
-	sudo docker run --name gstreamer-python-16 -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix/:/tmp/.X11-unix gstreamer-python:ubuntu-16
+	docker run --name gstreamer-python-16 -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix/:/tmp/.X11-unix gstreamer-python:ubuntu-16
 ## Test gstreamer
 	# if you had exit and close the container, restart the container and go into it 
 	
 	# check the container id
-	sudo docker ps -a  
+	docker ps -a  
 	# start the container
-	sudo docker start <container id>  
+	docker start <container id>  
 	# copy the test file from host to container
-	sudo docker cp <path of the test file> <container id>:<path you want to copy to>  
+	docker cp <path of the test file> <container id>:<path you want to copy to>  
 	# go into the container
-	sudo docker exec -it <container id> bash  
+	docker exec -it <container id> bash  
 	# compile the .c file
 	gcc basic-tutorial-1.c -o basic-tutorial-1 `pkg-config --cflags --libs gstreamer-1.0`  
 	# execute it
