@@ -2,7 +2,16 @@
 Intro: Use the docker to build the gstreamer in ubuntu 16.04
 ## Install docker
 	# run the .sh in env to install the docker
-	sudo ./install_docker.sh	
+	sudo ./install_docker.sh
+## Manage Docker as a non-root user
+	#Create the docker group
+	sudo groupadd docker
+	#Add your user to the docker group
+	sudo usermod -aG docker $USER
+	#Log out and log back in so that your group membership is re-evaluated
+	newgrp docker
+	#Verify that you can run docker commands without sudo
+	docker run hello-world
 ## Install gstreamer
 	# build the dockerfile in env
 	docker build -t gstreamer-python:ubuntu-16
